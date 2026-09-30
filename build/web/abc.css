@@ -1,0 +1,45 @@
+body
+{
+	background-image:url("img.jpg");
+}
+#mymenu
+{
+	background-color:rgba(0,0,0,0.5);
+	color:white;
+	text-align:right;
+}
+#mymenu ul li
+{
+	color:white;
+	display:inline-block;
+	padding:20px;
+}
+table
+{
+	margin-top:100px;
+	background-color:rgba(0,0,0,0.5);
+	color:white;
+	box-shadow:15px 15px 15px white;
+	font-size:20px;
+}
+.B
+{
+	width:85px;
+	height:40px;
+	background:linear-gradient(red,blue);
+	color:white;
+	border-radius:20px 0px 20px 0px;
+}
+.B:hover
+{
+	width:85px;
+	height:40px;
+	background:linear-gradient(to right,red,blue);
+	color:white;
+	border-radius:0px 20px 0px 20px;
+}
+#t1
+{ 
+     height:30px;
+	border-radius:10px;
+}
