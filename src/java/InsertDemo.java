@@ -12,8 +12,6 @@ public class InsertDemo extends HttpServlet
 		String s3=request.getParameter("n3");
 		String s4=request.getParameter("n4");
 		String s5=request.getParameter("n5");
-		out.println("<html>");
-		out.println("<body>");
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -21,14 +19,14 @@ public class InsertDemo extends HttpServlet
 			Statement st=con.createStatement();
 			st.executeUpdate("insert into insmarks values('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"')");
 			con.close();
+			response.sendRedirect("ShowAll");
 		}
 		catch(Exception e)
 		{
-		out.println(e);
+			out.println("<html><body>");
+			out.println(e);
+			out.println("</body></html>");
 		}
-	    response.sendRedirect("ShowAll");
-		out.println("</body>");
-		out.println("</html>");
 		out.close();
 	}
 }

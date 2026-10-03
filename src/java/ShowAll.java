@@ -18,7 +18,7 @@ public class ShowAll extends HttpServlet
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql:///ajava?useSSL=false","root","root");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ajava?useSSL=false","root","root");
 			Statement st=con.createStatement();
 			ResultSet rs=st.executeQuery("select * from insmarks");
 			out.println("<center>");

@@ -32,6 +32,10 @@
         <servlet-name>UpdateDemo</servlet-name>
         <servlet-class>UpdateDemo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteDemo</servlet-name>
+        <servlet-class>DeleteDemo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>InsertDemo</servlet-name>
         <url-pattern>/InsertDemo</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>UpdateDemo</servlet-name>
         <url-pattern>/UpdateDemo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteDemo</servlet-name>
+        <url-pattern>/DeleteDemo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

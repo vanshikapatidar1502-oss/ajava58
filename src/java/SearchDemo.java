@@ -7,7 +7,7 @@ public class SearchDemo extends HttpServlet
 	public void doGet(HttpServletRequest request ,HttpServletResponse response)throws ServletException,IOException
 	{
 		PrintWriter out=response.getWriter();
-		String s1=request.getParameter("n1");
+		String s1=request.getParameter("u1");
 		
 	
 		out.println("<html>");
@@ -18,7 +18,7 @@ public class SearchDemo extends HttpServlet
 		try
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql:///ajava?useSSL=false","root","root");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ajava?useSSL=false","root","root");
 			Statement st=con.createStatement();
 			ResultSet rs=st.executeQuery("select * from insmarks  where u1='"+s1+"'" );
 			out.println("<center>");
@@ -32,7 +32,6 @@ public class SearchDemo extends HttpServlet
                         out.println("<td><input type='text' name='n1' value='"+rs.getString(1)+"'></td>");
 			 out.println("</tr>");
                                  
-                         
 			out.println("<tr>");
 			out.println("<td> Name.</td>");
                         out.println("<td><input type='text' name='n2' value='"+rs.getString(2)+"'></td>");
